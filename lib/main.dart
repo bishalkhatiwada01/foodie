@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:foodie/Pages/CartPage.dart';
+import 'package:foodie/Pages/ItemPage.dart';
 
-import 'Pages/home_page.dart';
+import 'Pages/HomePage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,8 +21,9 @@ class MyApp extends StatelessWidget {
       ),
       // home: const HomePage(),
       routes: {
-        "/": (context) => HomePage(),
-        "cartPage": (context) => CartPage()
+        "/": (context) => const HomePage(),
+        "cartPage": (context) => const CartPage(),
+        "itemPage": (context) => const ItemPage(),
       },
     );
   }
