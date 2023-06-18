@@ -85,6 +85,19 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
+              Icons.notifications_outlined,
+              color: Colors.red,
+            ),
+            title: Text(
+              "Notifications",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          ListTile(
+            leading: Icon(
               CupertinoIcons.settings,
               color: Colors.red,
             ),

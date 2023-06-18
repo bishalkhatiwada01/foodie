@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodie/Pages/ItemPage2.dart';
+import 'package:foodie/Pages/ProfilePage.dart';
 import 'package:sizer/sizer.dart';
 import 'package:foodie/Pages/CartPage.dart';
 import 'package:foodie/Pages/ItemPage.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
               "cartPage": (context) => const CartPage(),
               "ItemPage": (context) => const ItemPage(),
               "ItemPage2": (context) => const ItemPage2(),
+              "ProfilePage": (context) => const ProfilePage(),
             },
           );
         },
