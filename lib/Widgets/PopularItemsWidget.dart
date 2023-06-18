@@ -37,7 +37,7 @@ class PopularItemsWidget extends StatelessWidget {
                     children: [
                       InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, "itemPage");
+                          Navigator.pushNamed(context, "ItemPage2");
                         },
                         child: Container(
                           alignment: Alignment.center,
@@ -107,11 +107,16 @@ class PopularItemsWidget extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: Image.asset(
-                          "images/pizza.png",
-                          height: 130,
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, "ItemPage");
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          child: Image.asset(
+                            "images/pizza.png",
+                            height: 130,
+                          ),
                         ),
                       ),
                       const Text(

@@ -1,30 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:foodie/Pages/ItemPage2.dart';
+import 'package:sizer/sizer.dart';
 import 'package:foodie/Pages/CartPage.dart';
 import 'package:foodie/Pages/ItemPage.dart';
 
 import 'Pages/HomePage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Foodie",
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFFF5F5F3),
+    return SafeArea(
+      child: Sizer(
+        builder: (context, orientation, deviceType) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Foodie',
+            theme: ThemeData(
+              scaffoldBackgroundColor: const Color(0xFFF5F5F3),
+            ),
+            routes: {
+              "/": (context) => const HomePage(),
+              "cartPage": (context) => const CartPage(),
+              "ItemPage": (context) => const ItemPage(),
+              "ItemPage2": (context) => const ItemPage2(),
+            },
+          );
+        },
       ),
-      // home: const HomePage(),
-      routes: {
-        "/": (context) => const HomePage(),
-        "cartPage": (context) => const CartPage(),
-        "itemPage": (context) => const ItemPage(),
-      },
     );
   }
 }
