@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodie/Widgets/AppBarWidget.dart';
-import 'package:foodie/Widgets/Item2BottomNavBar.dart';
+
 import 'package:sizer/sizer.dart';
 
 class ItemPage2 extends StatelessWidget {
@@ -179,7 +178,7 @@ class ItemPage2 extends StatelessWidget {
                               width: 2.w,
                             ),
                             Text(
-                              'Go to Cart',
+                              'Add to Cart',
                               style: TextStyle(
                                 fontSize: 12.sp,
                                 color: Colors.white,

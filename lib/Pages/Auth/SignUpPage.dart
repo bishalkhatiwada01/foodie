@@ -32,16 +32,8 @@ class _SignupPageState extends State<SignupPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
-                child: Padding(
-                  padding: EdgeInsets.only(top: 2.h),
-                  child: Image.asset(
-                    "assets/logo_riderop.png",
-                  ),
-                ),
-              ),
               SizedBox(
-                height: 5.h,
+                height: 10.h,
               ),
               Text(
                 "Create an account",
@@ -224,7 +216,7 @@ class _SignupPageState extends State<SignupPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            'assets/google.png',
+                            'images/g.svg.png',
                             height: 24,
                             width: 24,
                           ),
@@ -254,7 +246,7 @@ class _SignupPageState extends State<SignupPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            'assets/facebook.png',
+                            'images/facebook.png',
                             height: 24,
                             width: 24,
                           ),

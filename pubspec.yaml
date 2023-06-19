@@ -38,6 +38,8 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   sizer: ^2.0.15
   clippy_flutter: ^2.0.0-nullsafety.1
+  responsive_framework: ^1.1.0
+  flutter_riverpod: ^2.3.6
 
 dev_dependencies:
   flutter_test:

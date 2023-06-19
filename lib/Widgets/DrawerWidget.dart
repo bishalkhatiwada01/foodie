@@ -10,7 +10,7 @@ class DrawerWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             padding: EdgeInsets.zero,
             child: UserAccountsDrawerHeader(
               decoration: BoxDecoration(color: Colors.red),
@@ -32,7 +32,7 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               CupertinoIcons.home,
               color: Colors.red,
@@ -50,11 +50,11 @@ class DrawerWidget extends StatelessWidget {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => AccountPage()));
             },
-            leading: Icon(
+            leading: const Icon(
               CupertinoIcons.person,
               color: Colors.red,
             ),
-            title: Text(
+            title: const Text(
               "My Account",
               style: TextStyle(
                 fontSize: 18,
@@ -62,7 +62,7 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               CupertinoIcons.cart,
               color: Colors.red,
@@ -75,7 +75,7 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               CupertinoIcons.heart_fill,
               color: Colors.red,
@@ -88,7 +88,7 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               Icons.notifications_outlined,
               color: Colors.red,
@@ -101,7 +101,7 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               CupertinoIcons.settings,
               color: Colors.red,
@@ -114,7 +114,7 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               Icons.exit_to_app,
               color: Colors.red,

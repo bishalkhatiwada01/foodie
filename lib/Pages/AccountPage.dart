@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/CartPage.dart';
-import 'package:foodie/Pages/HomePage.dart';
 import 'package:foodie/Pages/ProfilePage.dart';
 import 'package:foodie/Widgets/AppBarWidget.dart';
 import 'package:foodie/Widgets/CustomListTile.dart';
@@ -9,7 +7,9 @@ import 'package:sizer/sizer.dart';
 
 class AccountPage extends StatelessWidget {
   final searchController = TextEditingController();
-  final Color mainColor = Color(0xffD40909);
+  final Color mainColor = const Color(0xffD40909);
+
+  AccountPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +19,11 @@ class AccountPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 1.4.h),
           children: [
             AppBarWidget(),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             PreferredSize(
-              preferredSize: Size.fromHeight(180),
+              preferredSize: const Size.fromHeight(180),
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 1.w),
                 child: Container(
@@ -64,7 +64,7 @@ class AccountPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -85,7 +85,8 @@ class AccountPage extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (Context) => ProfilePage()));
+                          // ignore: non_constant_identifier_names
+                          builder: (Context) => const ProfilePage()));
                     },
                     child: customListTile(
                       title: 'Profile',

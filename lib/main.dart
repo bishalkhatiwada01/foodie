@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/AccountPage.dart';
 import 'package:foodie/Pages/ItemPage2.dart';
 import 'package:foodie/Pages/ProfilePage.dart';
 import 'package:foodie/Pages/SplashScreen.dart';
 import 'package:sizer/sizer.dart';
 import 'package:foodie/Pages/CartPage.dart';
 import 'package:foodie/Pages/ItemPage.dart';
-
-import 'Pages/HomePage.dart';
 
 void main() {
   runApp(MyApp());

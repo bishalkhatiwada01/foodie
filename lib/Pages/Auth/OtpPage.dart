@@ -247,7 +247,7 @@ class _OtpPageState extends State<OtpPage> {
                         ),
                       ),
                       child: Text(
-                        'Send OTP',
+                        'Confirm OTP',
                         style: TextStyle(fontSize: 12.sp),
                       ),
                     ),
