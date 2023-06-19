@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:foodie/Pages/AccountPage.dart';
 import 'package:foodie/Pages/ItemPage2.dart';
 import 'package:foodie/Pages/ProfilePage.dart';
+import 'package:foodie/Pages/SplashScreen.dart';
 import 'package:sizer/sizer.dart';
 import 'package:foodie/Pages/CartPage.dart';
 import 'package:foodie/Pages/ItemPage.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: const Color(0xFFF5F5F3),
             ),
             routes: {
-              "/": (context) => const HomePage(),
+              "/": (context) => const SplashScreen(),
               "cartPage": (context) => const CartPage(),
               "ItemPage": (context) => const ItemPage(),
               "ItemPage2": (context) => const ItemPage2(),

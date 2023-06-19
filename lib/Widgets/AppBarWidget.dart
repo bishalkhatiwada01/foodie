@@ -51,9 +51,7 @@ class AppBarWidget extends StatelessWidget {
             ],
           )),
           InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, "ProfilePage");
-            },
+            onTap: () {},
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
@@ -67,7 +65,7 @@ class AppBarWidget extends StatelessWidget {
                       offset: const Offset(0, 3)),
                 ],
               ),
-              child: const Icon(CupertinoIcons.person),
+              child: const Icon(Icons.notifications),
             ),
           ),
         ],
