@@ -3,8 +3,20 @@ import 'package:foodie/Widgets/AppBarWidget.dart';
 
 import 'package:sizer/sizer.dart';
 
-class ItemPage2 extends StatelessWidget {
+class ItemPage2 extends StatefulWidget {
   const ItemPage2({super.key});
+
+  @override
+  State<ItemPage2> createState() => _ItemPage2State();
+}
+
+class _ItemPage2State extends State<ItemPage2> {
+  int quantity = 0;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,13 +102,23 @@ class ItemPage2 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (quantity == 0) {
+                      setState(() {
+                        quantity = 0;
+                      });
+                    } else {
+                      setState(() {
+                        quantity--;
+                      });
+                    }
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
                       shape: const CircleBorder(),
                       padding: EdgeInsets.all(1.w)),
                   child: const Icon(
-                    Icons.add,
+                    Icons.remove,
                     color: Colors.black,
                   ),
                 ),
@@ -104,20 +126,24 @@ class ItemPage2 extends StatelessWidget {
                   width: 1.w,
                 ),
                 Text(
-                  "1234",
+                  "$quantity",
                   style: TextStyle(fontSize: 18.sp),
                 ),
                 SizedBox(
                   width: 1.w,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      quantity++;
+                    });
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
                       shape: const CircleBorder(),
                       padding: EdgeInsets.all(1.w)),
                   child: const Icon(
-                    Icons.remove,
+                    Icons.add,
                     color: Colors.black,
                   ),
                 ),
@@ -167,24 +193,27 @@ class ItemPage2 extends StatelessWidget {
                                 bottomRight: Radius.circular(10)),
                           ),
                         ),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.shopping_bag_outlined,
-                              color: Colors.white,
-                              size: 8.w,
-                            ),
-                            SizedBox(
-                              width: 2.w,
-                            ),
-                            Text(
-                              'Add to Cart',
-                              style: TextStyle(
-                                fontSize: 12.sp,
+                        child: InkWell(
+                          onTap: () {},
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.shopping_bag_outlined,
                                 color: Colors.white,
+                                size: 8.w,
                               ),
-                            ),
-                          ],
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              Text(
+                                'Add to Cart',
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
                         )),
                   ],
                 ),

@@ -6,9 +6,15 @@ import 'package:foodie/Widgets/AppBarWidget.dart';
 import 'package:foodie/Widgets/ItemBottomNavBar.dart';
 import 'package:sizer/sizer.dart';
 
-class ItemPage extends StatelessWidget {
+class ItemPage extends StatefulWidget {
   const ItemPage({super.key});
 
+  @override
+  State<ItemPage> createState() => _ItemPageState();
+}
+
+class _ItemPageState extends State<ItemPage> {
+  int quantity = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +28,6 @@ class ItemPage extends StatelessWidget {
               child: Image.asset(
                 "images/pizza.png",
                 height: 300,
-                // width: double.infinity,
-                // width: 300,
               ),
             ),
             Arc(
@@ -86,27 +90,45 @@ class ItemPage extends StatelessWidget {
                                 color: Colors.red,
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              child: const Row(
+                              child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Icon(
-                                    CupertinoIcons.minus,
-                                    color: Colors.white,
-                                    size: 20,
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (quantity == 0) {
+                                        quantity = 0;
+                                      } else {
+                                        setState(() {
+                                          quantity--;
+                                        });
+                                      }
+                                    },
+                                    child: Icon(
+                                      CupertinoIcons.minus,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
                                   ),
                                   Text(
-                                    "1",
+                                    "$quantity",
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  Icon(
-                                    CupertinoIcons.plus,
-                                    color: Colors.white,
-                                    size: 20,
+                                  GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        quantity++;
+                                      });
+                                    },
+                                    child: Icon(
+                                      CupertinoIcons.plus,
+                                      color: Colors.white,
+                                      size: 20,
+                                    ),
                                   ),
                                 ],
                               ),

@@ -87,7 +87,10 @@ class _HomePageState extends State<HomePage> {
             ),
 
             // Category widget
-            const CategoriesWidget(),
+            SizedBox(
+              height: 100,
+              child: const CategoriesWidget(),
+            ),
 
             // Popular Items
             const Padding(
