@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodie/Pages/AccountPage.dart';
+import 'package:foodie/Pages/ProfilePage.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -10,25 +11,31 @@ class DrawerWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             padding: EdgeInsets.zero,
-            child: UserAccountsDrawerHeader(
-              decoration: BoxDecoration(color: Colors.red),
-              accountName: Text(
-                "Bishal Khatiwada",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (Context) => ProfilePage()));
+              },
+              child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.red),
+                accountName: Text(
+                  "Bishal Khatiwada",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              accountEmail: Text(
-                "bishalkhatiwada14@gmail.com",
-                style: TextStyle(
-                  fontSize: 16,
+                accountEmail: Text(
+                  "bishalkhatiwada14@gmail.com",
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
                 ),
-              ),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("images/avatar.jpg"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage("images/avatar.jpg"),
+                ),
               ),
             ),
           ),

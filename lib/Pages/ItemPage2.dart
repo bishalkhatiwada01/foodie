@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:foodie/Widgets/AppBarWidget.dart';
+import 'package:foodie/model/food.dart';
 
 import 'package:sizer/sizer.dart';
 
 class ItemPage2 extends StatefulWidget {
-  const ItemPage2({super.key});
+  const ItemPage2({super.key, required this.foodItem});
+  final Food foodItem;
 
   @override
   State<ItemPage2> createState() => _ItemPage2State();

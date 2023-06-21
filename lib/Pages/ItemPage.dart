@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:foodie/Widgets/AppBarWidget.dart';
 import 'package:foodie/Widgets/ItemBottomNavBar.dart';
-import 'package:sizer/sizer.dart';
+import 'package:foodie/model/food.dart';
 
 class ItemPage extends StatefulWidget {
-  const ItemPage({super.key});
+  const ItemPage({super.key, required this.foodItem});
+  final Food foodItem;
 
   @override
   State<ItemPage> createState() => _ItemPageState();
@@ -17,6 +18,7 @@ class _ItemPageState extends State<ItemPage> {
   int quantity = 0;
   @override
   Widget build(BuildContext context) {
+    final food = widget.foodItem;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: 5),
@@ -26,7 +28,7 @@ class _ItemPageState extends State<ItemPage> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Image.asset(
-                "images/pizza.png",
+                food.imageUrl,
                 height: 300,
               ),
             ),
@@ -58,8 +60,8 @@ class _ItemPageState extends State<ItemPage> {
                                   const Icon(Icons.star, color: Colors.red),
                               onRatingUpdate: (index) {},
                             ),
-                            const Text(
-                              "\$10",
+                            Text(
+                              "\$ ${food.price}",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -76,8 +78,8 @@ class _ItemPageState extends State<ItemPage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              "Italian Pizza",
+                            Text(
+                              food.name,
                               style: TextStyle(
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
@@ -136,12 +138,12 @@ class _ItemPageState extends State<ItemPage> {
                           ],
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
                           vertical: 10,
                         ),
                         child: Text(
-                          "Indulge in the flavors of Italy, Thin and crispy crust, a delight so tasty. Fresh ingredients, carefully combined, Authentic Italian Pizza, a culinary find",
+                          food.description,
                           style: TextStyle(fontSize: 16),
                           textAlign: TextAlign.justify,
                         ),

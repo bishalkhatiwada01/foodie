@@ -25,8 +25,6 @@ class MyApp extends StatelessWidget {
             routes: {
               "/": (context) => const SplashScreen(),
               "cartPage": (context) => const CartPage(),
-              "ItemPage": (context) => const ItemPage(),
-              "ItemPage2": (context) => const ItemPage2(),
               "ProfilePage": (context) => const ProfilePage(),
             },
           );

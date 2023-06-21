@@ -20,108 +20,124 @@ class _HomePageState extends State<HomePage> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        body: ListView(
-          children: [
-            // Custom App Bar Widget
-            AppBarWidget(),
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: SizedBox(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Custom App Bar Widget
+                AppBarWidget(),
 
-            // Search
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 10,
-                horizontal: 15,
-              ),
-              child: Container(
-                width: double.infinity,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 2,
-                      blurRadius: 10,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Row(
-                    children: [
-                      const Icon(
-                        CupertinoIcons.search,
-                        color: Colors.red,
-                      ),
-                      Container(
-                        height: 50,
-                        width: 300,
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 15,
-                          ),
-                          child: TextFormField(
-                            decoration: const InputDecoration(
-                                hintText: "What would you like to have?",
-                                border: InputBorder.none),
-                          ),
+                // Search
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 15,
+                  ),
+                  child: Container(
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 2,
+                          blurRadius: 10,
+                          offset: const Offset(0, 3),
                         ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            CupertinoIcons.search,
+                            color: Colors.red,
+                          ),
+                          Container(
+                            height: 50,
+                            width: 300,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 15,
+                              ),
+                              child: TextFormField(
+                                decoration: const InputDecoration(
+                                    hintText: "What would you like to have?",
+                                    border: InputBorder.none),
+                              ),
+                            ),
+                          ),
+                          const Icon(Icons.filter_list),
+                        ],
                       ),
-                      const Icon(Icons.filter_list),
-                    ],
+                    ),
                   ),
                 ),
-              ),
-            ),
-            // Cetogory
-            const Padding(
-              padding: EdgeInsets.only(top: 15, left: 10),
-              child: Text(
-                "Categories",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                // Cetogory
+                const Padding(
+                  padding: EdgeInsets.only(top: 15, left: 10),
+                  child: Text(
+                    "Categories",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
                 ),
-              ),
-            ),
 
-            // Category widget
-            SizedBox(
-              height: 100,
-              child: const CategoriesWidget(),
-            ),
-
-            // Popular Items
-            const Padding(
-              padding: EdgeInsets.only(top: 15, left: 10),
-              child: Text(
-                "Popular ",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                // Category widget
+                SizedBox(
+                  height: 100,
+                  child: const CategoriesWidget(),
                 ),
-              ),
-            ),
 
-            // Popular Items Widget
-            const PopularItemsWidget(),
-
-            //Newest Items
-            const Padding(
-              padding: EdgeInsets.only(top: 15, left: 10),
-              child: Text(
-                "Newest ",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                // Popular Items
+                const Padding(
+                  padding: EdgeInsets.only(top: 15, left: 10),
+                  child: Text(
+                    "Popular ",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
                 ),
-              ),
-            ),
+                const SizedBox(
+                  height: 5,
+                ),
+                // Popular Items Widget
+                Container(
+                  height: 235,
+                  width: double.infinity,
+                  child: PopularItemsWidget(),
+                ),
 
-            //Newest Items Widget
-            const NewestItemsWidget(),
-          ],
+                //Newest Items
+                const Padding(
+                  padding: EdgeInsets.only(top: 15, left: 10),
+                  child: Text(
+                    "Newest ",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  height: 600,
+                  width: double.infinity,
+                  child: NewestItemsWidget(),
+                ),
+              ],
+            ),
+          ),
         ),
         drawer: DrawerWidget(),
         floatingActionButton: Container(
