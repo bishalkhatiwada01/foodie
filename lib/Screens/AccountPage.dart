@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/ProfilePage.dart';
+import 'package:foodie/Screens/ProfilePage.dart';
 import 'package:foodie/Widgets/AppBarWidget.dart';
 import 'package:foodie/Widgets/CustomListTile.dart';
 

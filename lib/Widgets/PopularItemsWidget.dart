@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/ItemPage.dart';
-import 'package:foodie/Pages/ItemPage2.dart';
+import 'package:foodie/Screens/ItemPage.dart';
+import 'package:foodie/Screens/ItemPage2.dart';
 import 'package:foodie/constant/const.dart';
 
 class PopularItemsWidget extends StatelessWidget {

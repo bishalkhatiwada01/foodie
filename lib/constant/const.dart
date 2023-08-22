@@ -21,5 +21,5 @@ final foodList = [
     description: "Taste the best biryani in the Town",
     price: 8,
     imageUrl: "images/biryani.png",
-  )
+  ),
 ];

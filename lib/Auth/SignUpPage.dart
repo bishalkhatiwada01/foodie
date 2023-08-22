@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/Auth/LoginPage.dart';
+import 'package:foodie/Auth/LoginPage.dart';
 
 import 'package:sizer/sizer.dart';
 

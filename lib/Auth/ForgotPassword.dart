@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/Auth/OtpPage.dart';
+import 'package:foodie/Auth/OtpPage.dart';
 
 import 'package:sizer/sizer.dart';
 

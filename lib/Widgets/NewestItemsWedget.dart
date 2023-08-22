@@ -51,14 +51,14 @@ class NewestItemsWidget extends StatelessWidget {
                   children: [
                     Text(
                       food.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       food.description,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         // fontWeight: FontWeight.bold,
                       ),
@@ -78,7 +78,7 @@ class NewestItemsWidget extends StatelessWidget {
                     ),
                     Text(
                       "\$ ${food.price}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         color: Colors.red,
                         fontWeight: FontWeight.bold,

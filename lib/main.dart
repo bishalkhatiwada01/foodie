@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/ItemPage2.dart';
-import 'package:foodie/Pages/ProfilePage.dart';
-import 'package:foodie/Pages/SplashScreen.dart';
+import 'package:foodie/Screens/ItemPage2.dart';
+import 'package:foodie/Screens/ProfilePage.dart';
+import 'package:foodie/Screens/SplashScreen.dart';
 import 'package:sizer/sizer.dart';
-import 'package:foodie/Pages/CartPage.dart';
-import 'package:foodie/Pages/ItemPage.dart';
+import 'package:foodie/Screens/CartPage.dart';
+import 'package:foodie/Screens/ItemPage.dart';
 
 void main() {
   runApp(MyApp());

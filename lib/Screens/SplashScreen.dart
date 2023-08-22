@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/Auth/LoginPage.dart';
+import 'package:foodie/Auth/LoginPage.dart';
 
 import 'package:sizer/sizer.dart';
 

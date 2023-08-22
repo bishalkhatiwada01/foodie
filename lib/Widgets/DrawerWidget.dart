@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/AccountPage.dart';
-import 'package:foodie/Pages/ProfilePage.dart';
+import 'package:foodie/Auth/LoginPage.dart';
+import 'package:foodie/Screens/AccountPage.dart';
+import 'package:foodie/Screens/ProfilePage.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -121,16 +122,22 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
-          const ListTile(
+          ListTile(
             leading: Icon(
               Icons.exit_to_app,
               color: Colors.red,
             ),
-            title: Text(
-              "Log Out",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            title: InkWell(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (Context) => LoginPage()));
+              },
+              child: Text(
+                "Log Out",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:foodie/Pages/Auth/SignUpPage.dart';
+import 'package:foodie/Auth/SignUpPage.dart';
 
 import 'package:sizer/sizer.dart';
 import 'package:flutter/services.dart';

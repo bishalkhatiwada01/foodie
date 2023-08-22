@@ -1,9 +1,9 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:foodie/Pages/Auth/ForgotPassword.dart';
-import 'package:foodie/Pages/Auth/SignUpPage.dart';
-import 'package:foodie/Pages/HomePage.dart';
+import 'package:foodie/Auth/ForgotPassword.dart';
+import 'package:foodie/Auth/SignUpPage.dart';
+import 'package:foodie/Screens/HomePage.dart';
 
 import 'package:sizer/sizer.dart';
 
@@ -23,6 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   final _formkey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  // final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   @override
   Widget build(BuildContext context) {
@@ -187,33 +188,41 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    SizedBox(
-                      width: 40.w,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                              const Color.fromARGB(255, 238, 238, 238)),
-                          foregroundColor:
-                              MaterialStateProperty.all<Color>(Colors.black),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'images/g.svg.png',
-                              height: 24,
-                              width: 24,
-                            ),
-                            const SizedBox(width: 8),
-                            const Text(
-                              'Google',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                    InkWell(
+                      onTap: () {
+                        // _googleSignIn.signIn().then((value) {
+                        //   String userName = value!.displayName!;
+                        //   String profilePicture = value!.photoUrl!;
+                        // });
+                      },
+                      child: SizedBox(
+                        width: 40.w,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                const Color.fromARGB(255, 238, 238, 238)),
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.black),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'images/g.svg.png',
+                                height: 24,
+                                width: 24,
                               ),
-                            ),
-                          ],
+                              const SizedBox(width: 8),
+                              const Text(
+                                'Google',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
