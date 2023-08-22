@@ -22,4 +22,11 @@ final foodList = [
     price: 8,
     imageUrl: "images/biryani.png",
   ),
+  Food(
+    id: 4,
+    name: "Chicken Biryani",
+    description: "Taste the best biryani in the Town",
+    price: 8,
+    imageUrl: "images/biryani.png",
+  ),
 ];

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodie/Widgets/NewestItemsWedget.dart';
+import 'package:foodie/Widgets/SearchWidget.dart';
 
 import '../Widgets/AppBarWidget.dart';
 import '../Widgets/DrawerWidget.dart';
@@ -30,10 +31,10 @@ class _HomePageState extends State<HomePage> {
                 AppBarWidget(),
 
                 // Search
-                SearchBar(),
+                SearchWidget(),
 
                 // Cetogory
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 15, left: 10),
                   child: Text(
                     "Categories",
@@ -84,7 +85,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 14),
                   height: 600,
